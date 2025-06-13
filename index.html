@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoctorFinder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #dbeafe, #fef9c3);
+      color: #111827;
+    }
+    header {
+      padding: 20px;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+    .logo-title img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    header h1 {
+      font-size: 28px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: floatText 3s ease-in-out infinite;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .hero button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes floatText {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+    .lang-selector {
+      margin-top: 30px;
+      color: #1e3a8a;
+    }
+    .lang-selector button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 1px solid #1e3a8a;
+      border-radius: 5px;
+      background: white;
+      cursor: pointer;
+      color: #1e3a8a;
+    }
+    .auth-section {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .auth-section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+    .auth-section input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .auth-section button {
+      width: 100%;
+      padding: 10px;
+      background: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #1e3a8a;
+      color: white;
+      margin-top: 155px;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 26px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .hero button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
+      header h1 {
+        font-size: 22px;
+      }
+      .region-button {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="logo">
+      <h1>DoctorFinder</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="">About</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="#contact">Contact</a>
+      <a href="signin.html" id="nav-signin">Sign In</a>
+  <a href="signup.html" id="nav-signup">Sign Up</a>
+  <img id="user-avatar" src="https://www.svgrepo.com/show/51238/avatar.svg" alt="User" style="width:30px; display:none; border-radius:50%;" />
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Eng yaxshi doktorni toping — tez, oson va ishonchli!</h2>
+    <p>Hududingizga eng yaqin va ishonchli tibbiy xizmatni tanlang.</p>
+   <button onclick="checkAuth()">Boshlash</button>
+    <div class="lang-selector">
+ <button onclick="setLanguage('uz')">O'zbekcha</button>
+  <button onclick="setLanguage('ru')">Русский</button>
+  <button onclick="setLanguage('en')">English</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DoctorFinder. Barcha huquqlar himoyalangan.</p>
+  </footer>
+  <script>
+  function checkAuth() {
+    // Bu yerda real tekshiruv yo‘q, faqat ko‘rsatish uchun
+    const isLoggedIn = false; // bu haqiqiy tizimda sessiyadan olinadi
+
+    if (!isLoggedIn) {
+      alert("Iltimos, tizimdan ro‘yxatdan o‘ting.");
+      window.location.href = "#signup";
+    } else {
+      // agar tizimga kirgan bo‘lsa, asosiy sahifaga yo‘naltiriladi
+      window.location.href = "#main";
+    }
+  }
+
+  const translations = {
+    uz: {
+      title: "DoctorFinder",
+      heroText: "Eng yaxshi doktorni toping — tez, oson va ishonchli!",
+      heroDesc: "Hududingizga eng yaqin va ishonchli tibbiy xizmatni tanlang.",
+      start: "Boshlash",
+      signin: "Kirish",
+      signup: "Ro'yxatdan o'tish",
+      email: "Email",
+      password: "Parol",
+      fullname: "To'liq ism",
+      register: "Ro'yxatdan o'tish",
+      login: "Kirish"
+    },
+    ru: {
+      title: "ПоискДоктора",
+      heroText: "Найдите лучшего доктора — быстро, легко и надежно!",
+      heroDesc: "Выберите ближайшее и надежное медицинское обслуживание.",
+      start: "Начать",
+      signin: "Вход",
+      signup: "Регистрация",
+      email: "Эл. почта",
+      password: "Пароль",
+      fullname: "Полное имя",
+      register: "Зарегистрироваться",
+      login: "Войти"
+    },
+    en: {
+      title: "DoctorFinder",
+      heroText: "Find the best doctor — fast, easy and reliable!",
+      heroDesc: "Choose the nearest and most trusted medical service.",
+      start: "Get Started",
+      signin: "Sign In",
+      signup: "Sign Up",
+      email: "Email",
+      password: "Password",
+      fullname: "Full Name",
+      register: "Register",
+      login: "Login"
+    }
+  };
+
+  function setLanguage(lang) {
+    const t = translations[lang];
+    document.querySelector('header h1').textContent = t.title;
+    document.querySelector('.hero h2').textContent = t.heroText;
+    document.querySelector('.hero p').textContent = t.heroDesc;
+    document.querySelector('.hero button').textContent = t.start;
+    document.querySelector('a[href="#signin"]').textContent = t.signin;
+    document.querySelector('a[href="#signup"]').textContent = t.signup;
+
+    // Sign in form
+    document.querySelector('#signin h2').textContent = t.signin;
+    document.querySelector('#signin input[placeholder="Email"]').placeholder = t.email;
+    document.querySelector('#signin input[placeholder="Password"]').placeholder = t.password;
+    document.querySelector('#signin button').textContent = t.login;
+
+    // Sign up form
+    document.querySelector('#signup h2').textContent = t.signup;
+    document.querySelector('#signup input[placeholder="Full Name"]').placeholder = t.fullname;
+    document.querySelector('#signup input[placeholder="Email"]').placeholder = t.email;
+    document.querySelector('#signup input[placeholder="Password"]').placeholder = t.password;
+    document.querySelector('#signup button').textContent = t.register;
+  }
+   
+  function showUserAvatar() {
+    document.getElementById("nav-signin").style.display = "none";
+    document.getElementById("nav-signup").style.display = "none";
+    document.getElementById("user-avatar").style.display = "inline-block";
+  }
+
+  // Sign In tugmasi bosilganda
+  document.getElementById("signin-btn").addEventListener("click", function () {
+    const email = document.getElementById("signin-email").value;
+    const password = document.getElementById("signin-password").value;
+
+    if (email.trim() !== "" && password.trim() !== "") {
+      alert("Xush kelibsiz, " + email + "!");
+      showUserAvatar();
+    } else {
+      alert("Iltimos, email va parolni to‘ldiring.");
+    }
+  });
+</script>
+</body>
+</html>
