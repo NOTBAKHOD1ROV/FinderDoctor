@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoctorFinder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #dbeafe, #fef9c3);
+      color: #111827;
+    }
+    header {
+      padding: 20px;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+    .logo-title img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    header h1 {
+      font-size: 28px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: floatText 3s ease-in-out infinite;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .hero button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes floatText {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+    .lang-selector {
+      margin-top: 30px;
+    }
+    .lang-selector button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 1px solid #1e3a8a;
+      border-radius: 5px;
+      background: white;
+      cursor: pointer;
+      color: #1e3a8a;
+    }
+    .doctor-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .doctor-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .doctor-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .doctor-card h3 {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+    .doctor-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .regions {
+      padding: 40px;
+      text-align: center;
+    }
+    .region-button {
+      margin: 10px;
+      padding: 15px 25px;
+      background: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #1e3a8a;
+      color: white;
+      margin-top: 100px;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 26px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .hero button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
+      header h1 {
+        font-size: 22px;
+      }
+      .region-button {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="logo">
+      <h1>DoctorFinder</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#regions">Regions</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 id="mainText">Eng yaxshi doktorni toping — tez, oson va ishonchli!</h2>
+    <p id="subText">Hududingizga eng yaqin klinika va shifokorlarni aniqlang.</p>
+    <button onclick="alert('Iltimos, ro‘yxatdan o‘ting!')">Boshlash</button>
+    <div class="lang-selector">
+      <button onclick="setLang('uz')">O'zbekcha</button>
+      <button onclick="setLang('ru')">Русский</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </section>
+
+  <section id="doctors" class="doctor-list">
+    <!-- 10 ta toifa, har birida 1 erkak, 1 ayol doktor -->
+    <!-- Misol uchun faqat bittasini yozamiz -->
+    <div class="doctor-card">
+      <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Dr. Islom">
+      <h3>Dr. Islom</h3>
+      <p>Kardiolog</p>
+      <p>Jizzax,</p>
+    </div>
+    <div class="doctor-card">
+      <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Dr. Mohira">
+      <h3>Dr. Mohira</h3>
+      <p>Kardiolog</p>
+      <p>Jizzax,</p>
+    </div>
+    <!-- Yana 9 ta shu ko‘rinishda qo‘shamiz -->
+  </section>
+
+  <section id="regions" class="regions">
+    <h2>Viloyatlar</h2>
+    <button class="region-button">Toshkent</button>
+    <button class="region-button">Andijon</button>
+    <button class="region-button">Farg‘ona</button>
+    <button class="region-button">Namangan</button>
+    <button class="region-button">Buxoro</button>
+    <button class="region-button">Navoiy</button>
+    <button class="region-button">Xorazm</button>
+    <button class="region-button">Samarqand</button>
+    <button class="region-button">Qashqadaryo</button>
+    <button class="region-button">Surxondaryo</button>
+    <button class="region-button">Jizzax</button>
+    <button class="region-button">Sirdaryo</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DoctorFinder. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      uz: {
+        title: "Eng yaxshi doktorni toping — tez, oson va ishonchli!",
+        subtitle: "Hududingizga eng yaqin klinika va shifokorlarni aniqlang."
+      },
+      ru: {
+        title: "Найдите лучшего врача — быстро, легко и надежно!",
+        subtitle: "Определите ближайшие клиники и врачей в вашем районе."
+      },
+      en: {
+        title: "Find the best doctor — fast, easy, and reliable!",
+        subtitle: "Locate the nearest clinics and doctors in your area."
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("mainText").innerText = translations[lang].title;
+      document.getElementById("subText").innerText = translations[lang].subtitle;
+    }
+  </script>
+</body>
+</html>

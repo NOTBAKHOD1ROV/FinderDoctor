@@ -1,0 +1,26 @@
+{
+  "Toshkent": {
+    "Kardiolog": ["Dr. Kardiolog 1", "Dr. Kardiolog 2", "Dr. Kardiolog 3", "Dr. Kardiolog 4", "Dr. Kardiolog 5"],
+    "Nevrolog": ["Dr. Nevrolog 1", "Dr. Nevrolog 2", "Dr. Nevrolog 3", "Dr. Nevrolog 4", "Dr. Nevrolog 5"],
+    "Terapevt": ["Dr. Terapevt 1", "Dr. Terapevt 2", "Dr. Terapevt 3", "Dr. Terapevt 4", "Dr. Terapevt 5"],
+    "Urolog": ["Dr. Urolog 1", "Dr. Urolog 2", "Dr. Urolog 3", "Dr. Urolog 4", "Dr. Urolog 5"],
+    "Ginekolog": ["Dr. Ginekolog 1", "Dr. Ginekolog 2", "Dr. Ginekolog 3", "Dr. Ginekolog 4", "Dr. Ginekolog 5"],
+    "Pediatr": ["Dr. Pediatr 1", "Dr. Pediatr 2", "Dr. Pediatr 3", "Dr. Pediatr 4", "Dr. Pediatr 5"],
+    "Stomatolog": ["Dr. Stomatolog 1", "Dr. Stomatolog 2", "Dr. Stomatolog 3", "Dr. Stomatolog 4", "Dr. Stomatolog 5"],
+    "Dermatolog": ["Dr. Dermatolog 1", "Dr. Dermatolog 2", "Dr. Dermatolog 3", "Dr. Dermatolog 4", "Dr. Dermatolog 5"],
+    "Endokrinolog": ["Dr. Endokrinolog 1", "Dr. Endokrinolog 2", "Dr. Endokrinolog 3", "Dr. Endokrinolog 4", "Dr. Endokrinolog 5"],
+    "Psixolog": ["Dr. Psixolog 1", "Dr. Psixolog 2", "Dr. Psixolog 3", "Dr. Psixolog 4", "Dr. Psixolog 5"]
+  },
+  "Samarqand": {
+    "Kardiolog": ["Dr. Sam Kardiolog 1", "Dr. Sam Kardiolog 2", "Dr. Sam Kardiolog 3", "Dr. Sam Kardiolog 4", "Dr. Sam Kardiolog 5"],
+    "Nevrolog": ["Dr. Sam Nevrolog 1", "Dr. Sam Nevrolog 2", "Dr. Sam Nevrolog 3", "Dr. Sam Nevrolog 4", "Dr. Sam Nevrolog 5"],
+    "Terapevt": ["Dr. Sam Terapevt 1", "Dr. Sam Terapevt 2", "Dr. Sam Terapevt 3", "Dr. Sam Terapevt 4", "Dr. Sam Terapevt 5"],
+    "Urolog": ["Dr. Sam Urolog 1", "Dr. Sam Urolog 2", "Dr. Sam Urolog 3", "Dr. Sam Urolog 4", "Dr. Sam Urolog 5"],
+    "Ginekolog": ["Dr. Sam Ginekolog 1", "Dr. Sam Ginekolog 2", "Dr. Sam Ginekolog 3", "Dr. Sam Ginekolog 4", "Dr. Sam Ginekolog 5"],
+    "Pediatr": ["Dr. Sam Pediatr 1", "Dr. Sam Pediatr 2", "Dr. Sam Pediatr 3", "Dr. Sam Pediatr 4", "Dr. Sam Pediatr 5"],
+    "Stomatolog": ["Dr. Sam Stomatolog 1", "Dr. Sam Stomatolog 2", "Dr. Sam Stomatolog 3", "Dr. Sam Stomatolog 4", "Dr. Sam Stomatolog 5"],
+    "Dermatolog": ["Dr. Sam Dermatolog 1", "Dr. Sam Dermatolog 2", "Dr. Sam Dermatolog 3", "Dr. Sam Dermatolog 4", "Dr. Sam Dermatolog 5"],
+    "Endokrinolog": ["Dr. Sam Endokrinolog 1", "Dr. Sam Endokrinolog 2", "Dr. Sam Endokrinolog 3", "Dr. Sam Endokrinolog 4", "Dr. Sam Endokrinolog 5"],
+    "Psixolog": ["Dr. Sam Psixolog 1", "Dr. Sam Psixolog 2", "Dr. Sam Psixolog 3", "Dr. Sam Psixolog 4", "Dr. Sam Psixolog 5"]
+  }
+}

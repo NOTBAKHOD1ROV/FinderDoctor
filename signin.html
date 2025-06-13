@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DoctorFinder - Sign In</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #fef3c7, #e0f2fe);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .container .register-link {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .container .register-link a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e3a8a;
+      color: white;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Logo" />
+    <h1>DoctorFinder</h1>
+  </header>
+
+  <div id="signin" class="container">
+    <h2>Sign In</h2>
+    <input type="text" id="signin-email" placeholder="Email" />
+  <input type="password" id="signin-password" placeholder="Password" />
+  <button id="signin-btn">Login</button>
+    <div class="register-link">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 DoctorFinder. Barcha huquqlar himoyalangan.
+  </footer>
+</body>
+</html>
